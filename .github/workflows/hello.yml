@@ -14,5 +14,4 @@ jobs:
           echo "Hello World!"
       - date: Now it is
         run: |
-          date
           ls
