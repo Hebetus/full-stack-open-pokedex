@@ -49,7 +49,6 @@ processes = []
       timeout = "2s"
     
     [[services.script_checks]]
-      name = "health"
       command = "./health_check.sh"
       grace_period = "1s"
       interval = "5s"
