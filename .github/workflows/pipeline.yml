@@ -48,7 +48,7 @@ jobs:
               if: ${{ github.event_name == 'push' && failure() }}
               with:
                 severity: error
-                details: Deployment failed!, commit that caused it ${{ toJson(github.event.head_commit) }}
+                details: Deployment failed!, commit that caused it ${{ toJson(github.event.head_commit.url) }}
                 webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
     tag_release:

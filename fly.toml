@@ -41,15 +41,7 @@ processes = []
     port = 443
 
   [services.checks]
-    [[services.tcp_checks]]
-      grace_period = "1s"
-      interval = "15s"
-      restart_limit = 0
-      timeout = "2s"
-    
-    
-
-    [[services.script_checks]]
+   [[services.script_checks]]
       command = "./app/check.sh"
       grace_period = "10s"
       interval = "5s"
