@@ -21,3 +21,7 @@
       timeout = 2000
       tls_skip_verify = false
       [services.http_checks.headers]
+
+run: flyctl deploy --remote-only
+              env:
+                FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
